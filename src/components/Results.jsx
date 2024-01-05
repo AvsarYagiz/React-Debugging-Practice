@@ -1,7 +1,7 @@
 import { calculateInvestmentResults, formatter } from "../util/investment.js";
 
 export default function Results({ input }) {
-  const results = [];
+  const results = []; // Tested out of the component and it duplicates the results and errors beacuse of strict mode in reac, but after production build it works fine. That's why we should declare it in component.
   calculateInvestmentResults(input, results);
   if (results.length === 0) {
     return <p className="center">Invalid input data provided.</p>;
